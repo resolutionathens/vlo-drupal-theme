@@ -1,0 +1,184 @@
+@import "../config/config"
+
+// THEME: purely visual styling (“look-and-feel”) for a component.
+// Read more about SMACSS categorization for Drupal Themes: https://www.drupal.org/node/1887922
+// When following SMCASS, this would be used for dark/light themes (not general styling): https://smacss.com/book/type-theme
+
+// This file is complied separately so we can pull in config dependencies above
+// while also maintaining Drupals SMACSS structure.
+// @import "theme/theme--light"
+
+body
+  background: #E7E7E2
+
+// header and menu
+
+#header
+  height: 550px
+  width: 100%
+  background: 
+    image: url('/themes/basic/images/source/headers/header-home.jpg')
+    size: cover
+  margin-bottom: 2em
+
+.site-logo
+  margin-top: 25px
+  margin-left: 40px
+#block-basic-main-menu
+  display: flex
+  flex-wrap: nowrap
+  justify-content: space-between
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  height: 100px
+  background-color: rgba(29,35,32,0.7)
+  .menu
+    margin-top: 40px
+    text-align: right
+    margin-right: 40px
+  .menu-item
+    display: inline-block
+    margin-right: 1em
+    a
+      color: #E3DAC8
+      font-family: "Park Lane"
+      font-size: 18px
+      font-weight: bold
+      text-align: center
+    a:hover
+      color: #fff
+
+#block-basic-branding
+  margin-top: 25px
+
+.vlo-logo-color
+	height: 49px
+	width: 193px
+
+
+// homepage sections
+
+.upcoming-events
+  .events__image
+    margin-bottom: 1em
+  .events__event-location
+    font-weight: bold
+  .events__event-date
+    font-style: italic
+    margin-bottom: 0.75em
+  .events__body
+// typography
+
+// the two line, two font headlines on the homepage
+.h2-vlo
+  text-align: center
+  line-height: 0.95
+  .h2--line-one
+    font-family: "Avenir Next Condensed"
+    font-size: 20px
+    font-weight: 500
+    letter-spacing: 3px
+    color: #96A598
+    text-transform: uppercase
+  .h2--line-two
+    font-family: Georgia
+    font-size: 46px
+    font-weight: bold
+    font-style: italic
+    color: #545659
+    text-transform: lowercase
+
+.upcoming-events
+  .h2-vlo
+    text-align: left
+    line-height: 0.75
+    .h2--line-one
+      font-family: "Avenir Next Condensed"
+      font-size: 12px
+      font-weight: 500
+      letter-spacing: 3px
+      color: #96A598
+      text-transform: uppercase
+    .h2--line-two
+      font-family: Georgia
+      font-size: 20px
+      font-weight: bold
+      font-style: italic
+      color: #545659
+      text-transform: lowercase
+
+.node-readmore
+  margin-top: 10px
+  a
+    color: #137598
+
+// flexbox rows and columns
+.row
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+  margin-bottom: 50px
+
+.column--half
+  flex-basis: 49%
+
+.column--one-third
+  flex-basis: 31%
+
+.column--two-thirds
+  flex-basis: 66%
+
+.block-views-block-upcoming-events-block-1
+  h2
+    font-size: 18px
+    font-weight: normal
+    text-transform: uppercase
+
+// footer
+#footer
+  min-height: 400px
+  padding: 50px
+  background-color: #545659
+  box-shadow: inset 0 1px 3px 0 rgba(0,0,0,0.5), 0 2px 4px 0 rgba(0,0,0,0.5)
+  color: #F4F1F0
+  a
+    color: #F4F1F0
+  a:hover
+    text-decoration: underline
+  hr
+    margin: 50px 0
+.img__footer-logo
+  text-align: center
+  min-width: 35%
+  margin-top: 50px
+
+.social-icons
+  margin: 50px auto
+  display: flex
+  justify-content: space-around
+  width: 300px
+  margin-left: auto
+  margin-right: auto
+  .img__social-icon
+    height: 32px
+
+.envelope
+  margin-right: 5px
+  margin-top: 3px
+
+.copyright
+  margin-top: 20px
+  font-size: 0.75rem
+
+// basic utilities
+.text-center
+  text-align: center
+.text-left
+  text-align: left
+.text-right
+  text-align: right
+
+.mb-50
+  margin-bottom: 50px

@@ -1,0 +1,13 @@
+{{content.field_image}}
+<h2 class="h2-vlo text-left">
+  <span class="h2--line-one">Featured Event</span>
+  <br/>
+  <span class="h2--line-two">{{ label }}</span>
+</h2>
+{{content.field_event_location}}
+{{content.field_event_date}}
+{# {{content.body}} #}
+{% set text = content.body | render | striptags %}
+{{ text|length > 150 ? text|slice(0, 150) ~ '...' : text }}
+<br>
+{{content.links}}
